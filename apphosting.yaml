@@ -8,14 +8,38 @@ runConfig:
   # memoryMiB: 512
 
 # Environment variables and secrets.
-# env:
-  # Configure environment variables.
-  # See https://firebase.google.com/docs/app-hosting/configure#user-defined-environment
-  # - variable: MESSAGE
-  #   value: Hello world!
-  #   availability:
-  #     - BUILD
-  #     - RUNTIME
+env:
+  # Firebase Client Configuration
+  - variable: FIREBASE_API_KEY
+    value: AIzaSyBc3NN1Y6EERoIvJxqmsbK_skNhFpSEsrc
+    availability:
+      - BUILD
+      - RUNTIME
+  - variable: FIREBASE_AUTH_DOMAIN
+    value: testproject-31cc4.firebaseapp.com
+    availability:
+      - BUILD
+      - RUNTIME
+  - variable: FIREBASE_PROJECT_ID
+    value: testproject-31cc4
+    availability:
+      - BUILD
+      - RUNTIME
+  - variable: FIREBASE_STORAGE_BUCKET
+    value: testproject-31cc4.firebasestorage.app
+    availability:
+      - BUILD
+      - RUNTIME
+  - variable: FIREBASE_MESSAGING_SENDER_ID
+    value: "355787328409"
+    availability:
+      - BUILD
+      - RUNTIME
+  - variable: FIREBASE_APP_ID
+    value: 1:355787328409:web:3bf977040ae7133d86a108
+    availability:
+      - BUILD
+      - RUNTIME
 
   # Grant access to secrets in Cloud Secret Manager.
   # See https://firebase.google.com/docs/app-hosting/configure#secret-parameters
